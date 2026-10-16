@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>夜市6x6賓果</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="topbar">
+        <div class="title-wrap">
+          <p class="mini-tag">夜市遊戲</p>
+          <h1>6x6 賓果</h1>
+        </div>
+        <button id="reset-btn" class="secondary-btn" type="button">重置遊戲</button>
+      </header>
+
+      <section class="status-panel">
+        <div class="status-item">
+          <span class="label">抽牌次數</span>
+          <strong id="draw-count">0 / 12</strong>
+        </div>
+        <div class="status-item large">
+          <span class="label">已抽</span>
+          <strong id="drawn-list">尚未抽牌</strong>
+        </div>
+      </section>
+
+      <div id="message" class="message" aria-live="polite">開始抽牌，看看能不能連成一線！</div>
+
+      <section class="board-wrap">
+        <div id="board" class="board" aria-label="6x6 賓果棋盤"></div>
+      </section>
+
+      <div class="control-bar">
+        <button id="draw-btn" class="primary-btn" type="button">抽牌</button>
+      </div>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
