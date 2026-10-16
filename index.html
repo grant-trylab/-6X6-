@@ -18,20 +18,9 @@
 
       <section class="status-panel">
         <div class="status-item">
-          <span class="label">抽牌次數上限</span>
-          <select id="draw-limit-select" aria-label="選擇抽牌次數">
-            <option value="12" selected>12 次</option>
-            <option value="13">13 次</option>
-            <option value="14">14 次</option>
-            <option value="15">15 次</option>
-          </select>
-        </div>
-
-        <div class="status-item">
           <span class="label">抽牌次數</span>
           <strong id="draw-count">0 / 12</strong>
         </div>
-
         <div class="status-item large">
           <span class="label">已抽</span>
           <strong id="drawn-list">尚未抽牌</strong>
@@ -45,8 +34,25 @@
       </section>
 
       <div class="control-bar">
-        <button id="draw-btn" class="primary-btn" type="button">抽牌</button>
-        <button id="extra-draw-btn" class="extra-btn" type="button" hidden>海底撈月・補抽</button>
+        <div class="controls-left">
+          <label for="max-draws" class="label small">每回合抽牌上限</label>
+          <select id="max-draws">
+            <option value="12">12</option>
+            <option value="15">15</option>
+            <option value="18">18</option>
+          </select>
+        </div>
+        <div class="controls-right">
+          <button id="draw-btn" class="primary-btn" type="button">抽牌</button>
+        </div>
+      </div>
+
+      <!-- 補抽覆蓋層 -->
+      <div id="overlay" class="overlay hidden" aria-hidden="true">
+        <div class="overlay-content">
+          <button id="bonus-btn" class="bonus-action">海底撈月</button>
+          <p class="overlay-desc">點擊「海底撈月」補抽最後一張（特別顏色）</p>
+        </div>
       </div>
     </main>
 
