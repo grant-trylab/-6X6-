@@ -97,9 +97,24 @@ h1 {
   box-shadow: 0 12px 20px rgba(255, 159, 28, 0.34);
 }
 
+.extra-btn {
+  margin-left: 12px;
+  background: linear-gradient(135deg, #4cc9f0 0%, #3a86ff 100%);
+  color: white;
+  border: none;
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
+  font-weight: 800;
+  box-shadow: 0 10px 18px rgba(58, 134, 255, 0.28);
+}
+
+.extra-btn[hidden] {
+  display: none !important;
+}
+
 .status-panel {
   display: grid;
-  grid-template-columns: repeat(2, minmax(160px, 1fr));
+  grid-template-columns: repeat(3, minmax(160px, 1fr));
   gap: 16px;
   margin-bottom: 18px;
 }
@@ -129,6 +144,16 @@ h1 {
 .status-item strong {
   font-size: clamp(1rem, 2vw, 1.35rem);
   word-break: break-word;
+}
+
+select#draw-limit-select {
+  appearance: none;
+  -webkit-appearance: none;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 2px solid rgba(255,159,28,0.18);
+  background: white;
+  font-weight: 700;
 }
 
 .message {
